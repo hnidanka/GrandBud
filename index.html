@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="css/style.css">  -->
+    <!-- <link rel="stylesheet" href="/src/scss/media.scss"> -->
+    <!-- <link rel="stylesheet" href="/src/scss/animations.scss"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"> -->
+    <!-- <script type="module" src="app/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
+  </head>
+<body>
+    <header>
+        <nav>
+            <div id="menuBar-icon">
+                <img src="/favicon/menu.png" alt="menu"/>
+            </div>
+            <ul>
+                <div class="logo-container"><li data-target="home">Logo</li></div>
+                <div class="toolbar">
+                    <li data-target="about-us">O nas</li>
+                <li data-target="services">Usługi</li>
+                <li data-target="pricelist">Cennik</li>
+                <li data-target="works">Pracy</li>
+                <li data-target="contact">Kontakt</li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="home-banner" >
+                <div class="banner-image">
+                    <img src="/images/homeImg.jpg" alt="room">
+                        <h1 class="title-text">wykończenia Wnętrz</h1>
+                </div>
+                <div class="home-content">
+                    <div class="home-descr">
+                        <p>grandbud <br>
+                            Doskonałość<br> 
+                            w każdym detalu
+                        </p>
+                    </div>   
+                    <div class="home-action">
+                        <button data-target="works">
+                            <span class="home-action-text">Zobacz pracy</span>
+                        </button>
+                    </div>
+            </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section id="about-us" class="with-padding">
+                <div class="about-us-image-block">
+                    <img src="/images/kachura.jpg" alt="kachura">
+                </div>
+                <div class="about-us-text-block">
+                    <p class="slogan">
+                        Zawsze <br> dąrzymy do <br> doskonalności
+                    </p>
+                    <div class="about-us-info">
+                        <h2 class="title"> O nas</h2>
+                        <p class="text">
+                            Jesteśmy firmą budowlaną działającą na rynku od 2021 roku, jednak nasza historia 
+                            i doświadczenie sięgają znacznie dalej.  Od 8 lat świadczymy usługi w Polsce, a nasze korzenie w branży
+                             budowlanej sięgają ponad 20 lat. W ciągu tych lat zdobyliśmy zaufanie 
+                            i satysfakcję wielu stałych klientów, którzy doceniają naszą rzetelność i profesjonalizm. 
+                        </p>
+                        <button data-target="contact" class="about-us-action">Skontaktuj się</button>
+                    </div>
+                    <div class="about-us-rewards">
+                        <div class="rewardItem">
+                            <div class="title">20</div>
+                            <p>lat doswiadzenia</p>
+                        </div>
+                        <div class="rewardItem">
+                            <div class="title">
+                                <img src="/favicon/award.svg" alt="reward">
+                            </div>
+                            <p>Najlepsze meterialy</p>
+                        </div>
+                        <div class="rewardItem">
+                            <div class="title">
+                                100+
+                            </div>
+                            <p>zadowolonych klientów</p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="about-us-offer">
+                    <h3>W naszej ofercie znajdują się:</h3>
+                    <ul class="offer-list">
+                        <li>
+                            <p>kompleksowe usługi wykończeniowe mieszkań, domów, hal handlowych oraz hoteli.</p>
+                            <div class="divider"></div>
+                        </li>                      
+                        <li data-position="middle-bottom">
+                            <p>Grandbud to nie tylko wykonawstwo, ale również wsparcie w całym procesie budowlanym. Oferujemy dostawę materiałów, pomoc w ich wyborze oraz fachowe konsultacje</p>
+                            <div class="divider"></div>
+                        </li>
+                        <li data-position="last-bottom">
+                            <p> umożliwiając również realizację prac z materiałów dostarczonych przez zleceniodawcę</p>
+                            <div class="divider"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+        </section>
+        <div class="divider"></div>
+        <section id="services" class="with-padding">            
+          <h2 class="title"> Usugi</h2>
+            <ul id="services-list">
+                <li data-target="1" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="/public/favicon/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="2" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="3" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="4" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="5" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="6" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="7" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+                <li data-target="8" class=" service-block">
+                    <h3 class="service-name"> Malowanie </h3>
+                    <img class="service-icon" src="../src/assets/icons/paint-roll.png" alt="Malowanie">
+                    <p class="service-description"> Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz</p>
+                </li>
+            </ul>
+            <div id="pricelist" class="services-action">
+                <button>
+                    <span class="home-action-text">Zobacz cennik</span>
+                </button>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <section id="works">
+            <div class="works-header">
+                <h2>Nasze Pracy</h2>
+            </div>            
+            <div class="content">
+                <div class="work-text">                   
+                    <div class="work-slide-descr">                        
+                    </div>
+                    <div class="works-slider-actions">
+                        <button class="prev-action">
+                            <img src="/favicon/prev.svg" alt="prev">
+                        </button>
+                        <div class="works-slider-counter">
+                            <p><span class="current">01</span>/<span class="total">02</span></p>
+                        </div>
+                        <button class="next-action">
+                            <img src="/favicon/next.svg" alt="next">
+                        </button>       
+                    </div>
+                </div>               
+                <div class="works-slider">
+                    <div class="works-slider-inner">
+                        <div class="works-slide">
+                            <img src="/images/img1.jpg" alt="work1">
+                        </div>
+                        <div class="works-slide">
+                            <img src="/images/img2.jpg" alt="work2">
+                        </div>
+                        <div class="works-slide">
+                            <img src="/images/img3.jpg" alt="work3">
+                        </div>
+                        <div class="works-slide">
+                            <img src="/images/img4.jpg" alt="work4">
+                        </div>
+                        <div class="works-slide">
+                            <img src="/images/img5.jpg" alt="work5">
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="block" data-to-slide = 1></div>
+                        <div class="block" data-to-slide = 2></div>
+                        <div class="block" data-to-slide = 3></div>
+                        <div class="block" data-to-slide = 4></div>
+                        <div class="block" data-to-slide = 5></div>                       
+                    </div>
+                </div>
+            </div>       
+        </section>
+        <div class="divider"></div>       
+    </main>  
+   <footer>
+    <section id="contact" >
+    <div class="contact-header">   
+            <h2 class="title">Skontaktuj się z nami</h2>
+            <div class="content">
+                <p>Wypełnij formularz lub zadzwoń:</p> 
+                <div class="phone-block">
+                    <img class="icon" src="/public/favicon/phone.svg" alt="email">
+                    <p>+48730524951</p>
+                </div>
+           </div>
+    </div>  
+    <div class="contact-descr">
+        <ol class="contact-step-list">
+            <li>
+                <strong>Zostaw swoją wiadomość</strong>
+                <p>Wypełnij formularz kontaktowy lub zadzwoń do nas, aby zostawić swoją wiadomość</p>
+            </li>
+            <li>
+            <strong>Oczekuj na odpowiedź</strong>
+            <p>Skontaktujemy się z Tobą w ciągu 24 godzin, aby omówić Twoje zapytanie</p>
+            </li>
+            <li>
+            <strong> Omówienie szczegółów</strong>
+            <p>Podczas rozmowy omówimy wszystkie szczegóły Twojego zapytania i udzielimy niezbędnych informacji</p>
+            </li>
+            <li>
+            <strong>Dalsze kroki</strong>
+            <p>W zależności od Twoich potrzeb, ustalimy kolejne kroki współpracy</p>
+            </li>
+        </ol> 
+    </div>
+    <form id="contact-form">
+        <div class="form-header">
+            <p>Zostaw swoją wiadomość, a skontaktujemy się z Tobą w ciągu 24 godzin</p>
+        </div>
+        <fieldset>
+            <div class="client-data">
+              <input type="text" id="name" name="name" placeholder="Imię" required>
+              <input type="text" id="surname" name="surname" placeholder="Nazwisko" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="phone" placeholder="Numer telefonu" required>
+            </div>        
+        <textarea id="message" name="message" placeholder="Napisz tu swoją wiadomość" maxlength="1500" required></textarea>
+        <button type="submit" class="form-action">Wyślij</button>
+    </fieldset>
+    </form>
+    </section>
+    <div class="modal">
+            <div class="modal-content">
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>        
+            </div>
+    </div>
+   </footer>
+</body>
+</html>
+

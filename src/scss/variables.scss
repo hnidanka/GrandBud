@@ -1,0 +1,37 @@
+$page-title-weight: 400;
+$section-title-weight: 600;
+$section-subtitle-weight: 400;
+$primary-weight:300;
+$small-text-weigth: 100;
+$elem-big-weight: 600;
+
+$color-darkblue:rgb(6, 20, 27);
+$color-darkblue-lighter: #11212D;
+$color-darkblue-half-opacity: rgba(6, 20, 27, 0.5);
+// $color-darkblue-low-opacity: rgba(6, 20, 27, 0.2);
+$color-darkblue-less-opacity: rgba(6, 20, 27, 0.8);
+
+$color-blue-light:#7BA4A8;
+
+$color-primary: #ffffff;
+$color-primary-low-opacity: rgba(255, 255, 255, 0.2);
+$color-primary-half-opacity: rgba(255, 255, 255, 0.455);
+$color-primary-second: #1E1E1E;
+$color-divider: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0));
+
+$shadows:-10px -10px 30px #ffffff2c,  15px 15px 30px #0000003d; 
+$shadows-contact-form: -2px -2px 10px rgba(17, 33, 45, 0.2), 4px 4px 10px rgba(17, 33, 45, 0.25);
+$shadows-three-layers:-5px -5px  rgba(6,20,27, 0.5), 
+                        -10px -10px rgba(6, 20, 27, 0.4),
+                        -15px -15px rgba(6, 20, 27, 0.3);
+
+$gradient-border: linear-gradient(#ffffff, #ffffff) padding-box,
+                    linear-gradient(145deg, #7BA4A8 5%, #2D4056, #7BA4A8 90%) border-box;
+
+$blur: blur(15px);
+$brightness: brightness(0.4);
+$font: 'Raleway', sans-serif;
+$font-size: 18px;
+
+
+
