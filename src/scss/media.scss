@@ -17,6 +17,9 @@
 #contact #contact-form fieldset .client-data input{
     width: 37% !important;
    }
+   #works .content .works-slider .works-slider-inner .works-slide{
+    width: 15%;
+   }
 
 }
 
@@ -50,8 +53,15 @@
         width: 30%;
     }
 
-   
+    #works .content .works-slider .works-slider-inner .works-slide{
+        width: 13%;
+       }
     
+}
+@media (max-width: 900px) {
+    #works .content .works-slider .works-slider-inner .works-slide{
+        width: 11%;
+       }
 }
 
 @media (max-width: 768px) {
@@ -151,7 +161,6 @@ display:none !important;
 }
 #works .content{
     height: 80%;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -187,6 +196,7 @@ display:none !important;
     position: relative;
     width: 100%;
     margin-left: 5rem;
+    // height: 60%;
     
     
 } 
@@ -195,12 +205,15 @@ display:none !important;
     top: 0;
     
 }
-#works .content .works-slider .works-slide{
-    /* width: 20%;  */
+// #works .content .works-slider .works-slide{
+//     /* width: 20%;  */
+//     padding-right: 1rem;
+//     min-height: 284px;
+// }
+#works .content .works-slider .works-slider-inner .works-slide {
+    width: 15%;
     padding-right: 1rem;
-    min-height: 284px;
 }
-
 #works .content .works-slider .works-slide img {
     width: 90%;
     /* height: 100%; */
@@ -263,17 +276,11 @@ footer #contact #contact-form fieldset button {
 }
 @media (max-width: 560px) {
     html{
-        font-size: 12px;
+        font-size: 14px;
     }
-    // body{
-    //     overflow-x: hidden;
-    // }
     header nav{
         padding: 0.5rem 3rem;
     }
-    // #home{
-    //     height: auto;
-    // }
     .home-banner { 
         height: auto; 
     }
@@ -281,9 +288,10 @@ footer #contact #contact-form fieldset button {
         height: auto;
         
     }
-    .banner-image img {
+    
+    #home .home-banner .banner-image img {
         position: static;
-    }
+    }  
     .banner-image h1 {
         width: 100%;
         font-size: 2rem;
@@ -338,9 +346,21 @@ footer #contact #contact-form fieldset button {
     #works {
         height: auto;
         min-height: 100vh;
-        .works-slider {
-            height: 50vh;
+      .content{
+        .works-slider{
+            height: 400px;
+            width: 90%;
+            margin: 1rem;
+            .works-slider-inner {
+                .works-slide {
+                    // width: 20%;
+                }
+            }
+            .slider-nav{
+                width: 100%;
+            }
         }
+      } 
     }
 }
 
