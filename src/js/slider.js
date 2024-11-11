@@ -84,7 +84,7 @@ function slider() {
 
     const handleSlideChange = (slideIndx) => {
         changeActiveBlock(worksNavItems, slideIndx);
-        updateSlideDescription(slideIndx + 1, '/src/data/works.json');
+        updateSlideDescription(slideIndx + 1, 'data/works.json');
     };
 
     const worksSliderCounter = document.querySelector('.works-slider-actions'),
@@ -100,7 +100,7 @@ function slider() {
         worksSlideDescr = document.querySelector('.work-slide-descr');
 
     const worksSlider = setSlider(worksSliderWrapper, worksSlidesField, worksSlides, worksTotal, worksNavItems, worksCurrentIndx);
-    updateSlideDescription(1, '/src/data/works.json');
+    updateSlideDescription(1, 'data/works.json');
 
     worksNextButton.addEventListener('click', (e) => {
         e.preventDefault();

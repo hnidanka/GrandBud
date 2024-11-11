@@ -4,7 +4,7 @@ async function priceList(){
         const pricelistNav = document.querySelector('#pricelistNav');
         if (!pricelistNav) return; 
         try {
-        const response = await fetch('/src/data/pricelist.json');
+        const response = await fetch('data/pricelist.json');
        if(!response.ok){
         throw new Error('Error in try')
        }
@@ -34,7 +34,7 @@ async function priceList(){
         const pricelistNavSelect = document.querySelector('#pricelistNav-select');
         if (!pricelistNavSelect) return; 
         try {
-        const response = await fetch('/src/data/pricelist.json');
+        const response = await fetch('data/pricelist.json');
        if(!response.ok){
         throw new Error('Error in try')
        }
@@ -113,7 +113,7 @@ async function priceList(){
       
     }
 
-    const data = await fetchData('/src/data/pricelist.json');
+    const data = await fetchData('/data/pricelist.json');
     if (data) {
         data.pricelist.forEach(({ id, category, items }) => {
             new PricelistCategoty(id, category, items).addCategoryHeader();

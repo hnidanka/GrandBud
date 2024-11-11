@@ -5,7 +5,7 @@ function services(){
         serviceBlocks = servicesList.querySelectorAll('.service-block');
 
     async function showServices() {
-        const { services } = await fetchData('/src/data/services.json');
+        const { services } = await fetchData('data/services.json');
         serviceBlocks.forEach((elem, key) => {
             elem.innerHTML = `
                 <h3 class="service-name"> ${services[key].name} </h3>

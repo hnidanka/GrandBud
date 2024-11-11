@@ -9,43 +9,43 @@
         },
         {
             "name": "Zabudowy i tynki",
-            "img": "./public/favicon/paint-roll.png",
+            "img": "/favicon/paint-roll.png",
             "description": "Suche tynki, ścianki gipsowo-kartonowe, zabudowy – Montaż ścian działowych, sufitów podwieszanych ",
             "id": 2
         },
         {
             "name": "Glazura, terakota,gres",
-            "img": "./public/favicon/glazura.png",
+            "img": "/favicon/glazura.png",
             "description": "Profesjonalne układanie płytek ceramicznych w łazienkach, kuchniach oraz innych pomieszczeniach",
             "id": 3
         },
         {
             "name": "Drzwi i okna",
-            "img": "./public/favicon/drzwi-okna.svg",
+            "img": "/favicon/drzwi-okna.svg",
             "description": "Montaż i wymiana drzwi oraz okien, zapewniających bezpieczeństwo i estetykę budynku",
             "id": 4
         },
         {
             "name": "Podłogi Ściany",
-            "img": "./public/favicon/podloga.svg",
+            "img": "/favicon/podloga.svg",
             "description": "Podłogi, posadzki, wylewki samopoziomujące – Instalacja i wyrównywanie podłóg, zapewniając trwałość i estetykę.",
             "id": 5
         },
         {
             "name": "Hydraulika",
-            "img": "./public/favicon/hydraulika.svg",
+            "img": "/favicon/hydraulika.svg",
             "description": "Montaż urządzeń sanitarnych w łazienkach i WC, instalacje wodno-kanalizacyjne,centralnego ogrzewania oraz instalacja kotłowni",
             "id": 6
         },
         {
             "name": "Elektryka",
-            "img": "./public/favicon/elektryka.svg",
+            "img": "/favicon/elektryka.svg",
             "description": "Biały montaż,  instalacja gniazdek, włączników oraz innych punktów elektrycznych, dbając o bezpieczeństwo i wygodę użytkowania.",
             "id": 7
         },
         {
             "name": "Elewacje",
-            "img": "./public/favicon/elewacje.svg",
+            "img": "/favicon/elewacje.svg",
             "description": "Wykończenie zewnętrznych ścian budynków, poprawiające ich wygląd i właściwości termoizolacyjne.",
             "id": 8
         }
