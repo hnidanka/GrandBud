@@ -4,49 +4,49 @@
         {
             "name": "Malowanie",
             "img": "favicon/paint-roll.png",
-            "description": "Profesjonalne usługi malarskie, gwarantujące idealne wykończenie wnętrz",
+            "description": "Profesjonalne usługi malarskie",
             "id": 1
         },
         {
             "name": "Zabudowy i tynki",
             "img": "favicon/paint-roll.png",
-            "description": "Suche tynki, ścianki gipsowo-kartonowe, zabudowy – Montaż ścian działowych, sufitów podwieszanych ",
+            "description": "Suche tynki, ścianki g-k, zabudowy, montaż ścian działowych, sufitów podwieszanych ",
             "id": 2
         },
         {
             "name": "Glazura, terakota,gres",
             "img": "favicon/glazura.png",
-            "description": "Profesjonalne układanie płytek ceramicznych w łazienkach, kuchniach oraz innych pomieszczeniach",
+            "description": "Układanie płytek ceramicznych w łazienkach, kuchniach oraz innych pomieszczeniach",
             "id": 3
         },
         {
             "name": "Drzwi i okna",
             "img": "favicon/drzwi-okna.svg",
-            "description": "Montaż i wymiana drzwi oraz okien, zapewniających bezpieczeństwo i estetykę budynku",
+            "description": "Montaż i wymiana drzwi oraz okien",
             "id": 4
         },
         {
             "name": "Podłogi Ściany",
             "img": "favicon/podloga.svg",
-            "description": "Podłogi, posadzki, wylewki samopoziomujące – Instalacja i wyrównywanie podłóg, zapewniając trwałość i estetykę.",
+            "description": "Podłogi, posadzki, wylewki samopoziomujące, wyrównywanie podłóg",
             "id": 5
         },
         {
             "name": "Hydraulika",
             "img": "favicon/hydraulika.svg",
-            "description": "Montaż urządzeń sanitarnych w łazienkach i WC, instalacje wodno-kanalizacyjne,centralnego ogrzewania oraz instalacja kotłowni",
+            "description": "Montaż hydrauliki w łazienkach i WC, instalacje wodno-kanalizacyjne, centralnego ogrzewania, kotłowni",
             "id": 6
         },
         {
             "name": "Elektryka",
             "img": "favicon/elektryka.svg",
-            "description": "Biały montaż,  instalacja gniazdek, włączników oraz innych punktów elektrycznych, dbając o bezpieczeństwo i wygodę użytkowania.",
+            "description": "Biały montaż,  instalacja gniazdek, włączników oraz innych punktów elektrycznych",
             "id": 7
         },
         {
             "name": "Elewacje",
             "img": "favicon/elewacje.svg",
-            "description": "Wykończenie zewnętrznych ścian budynków, poprawiające ich wygląd i właściwości termoizolacyjne.",
+            "description": "Wykończenie zewnętrznych ścian budynków",
             "id": 8
         }
 
