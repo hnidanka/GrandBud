@@ -6,7 +6,6 @@ function slider() {
     function changeActiveBlock(arr, indx) {
         arr.forEach(item => item.classList.remove('active'));
         arr[indx].classList.add('active');
-        console.log(`World ChangeActive ${indx}`);
     }
 
     function setSlider(sliderWrapper, slidesField, slides, total, navItems, currentIndx) {
@@ -71,6 +70,7 @@ function slider() {
         let sliderDescriptionData = await fetchData(slideData);
         const description = sliderDescriptionData.works[slideIndex - 1];
         if (description) {
+            worksSlideDescr.classList.add('fade')
             worksSlideDescr.innerHTML = `
                 <h2>${description.header}</h2>
                 <p>${description.location}</p>
@@ -85,6 +85,8 @@ function slider() {
     const handleSlideChange = (slideIndx) => {
         changeActiveBlock(worksNavItems, slideIndx);
         updateSlideDescription(slideIndx + 1, 'data/works.json');
+        worksSlideDescr.classList.remove('fade')
+
     };
 
     const worksSliderCounter = document.querySelector('.works-slider-actions'),

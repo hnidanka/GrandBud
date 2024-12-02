@@ -1,5 +1,9 @@
-import { fetchData, addScrollEventListeners, navigateTo , scrollToServiceFromUrl} from './helper.js';
+import {addScrollEventListeners, navigateTo , scrollToServiceFromUrl} from './helper.js';
 async function priceList(){
+    const scrollBtn = document.querySelector('.scrollBtn');
+    scrollBtn.addEventListener('click', (e)=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
     async function initPricelistNav() {
         const pricelistNav = document.querySelector('#pricelistNav');
         if (!pricelistNav) return; 
@@ -41,7 +45,7 @@ async function priceList(){
         const {pricelist} = await response.json();
         const categoryList = document.createElement('select')
         categoryList.setAttribute('name', 'categoryList');
-        categoryList.setAttribute('id', 'categoryList');        // categotyList.classList.add('categotyList')
+        categoryList.setAttribute('id', 'categoryList');
         pricelist.forEach(elem=>{
             const category = document.createElement('option')
             category.setAttribute('value', elem.id);
@@ -51,14 +55,14 @@ async function priceList(){
         })
         pricelistNavSelect.appendChild(categoryList);
 
-        // addScrollEventListeners('#pricelistNav-select li');
+        addScrollEventListeners('#pricelistNav-select select');
         } catch (error) {
             console.log('Error')
         }
     }
     initPricelistNavSelect()
-    // tables
 
+    // tables
     class PricelistCategotyItem{
         constructor(id, name, price_net, unit){
             this.id = id;
@@ -77,16 +81,13 @@ async function priceList(){
             return row;
         }
     }
-
     class PricelistCategoty{
         constructor(id,category, items){
             this.id = id;
             this.category = category;
             this.items = items;
         }
-
         addCategoryHeader(){
-
             const mainSection = document.querySelector('#pricelist'),
             table = document.createElement('table'),
              thead = document.createElement('thead');
@@ -113,20 +114,37 @@ async function priceList(){
       
     }
 
-    const data = await fetchData('/data/pricelist.json');
-    if (data) {
-        data.pricelist.forEach(({ id, category, items }) => {
-            new PricelistCategoty(id, category, items).addCategoryHeader();
-        });
-    }
+const response = await fetch('data/pricelist.json');
+if (response.ok) {
+    const data = await response.json();
+    
+    data.pricelist.forEach(({ id, category, items }) => {
+        new PricelistCategoty(id, category, items).addCategoryHeader();
+    });
+} else {
+    console.error("Błąd w pobieraniu danych:", response.status);
+}
+
 
     navigateTo("header nav ul li")
     const params = new URLSearchParams(window.location.search);
     const serviceId = params.get('service');
-
     if (serviceId) {
-        // Znajdź sekcję, do której należy przewinąć
      scrollToServiceFromUrl(serviceId);
+    }
+
+    const menuItems = document.querySelectorAll('nav ul li')
+    if (menuItems.length > 0) {
+        menuItems.forEach(section => {
+            section.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = section.getAttribute('data-target');
+                console.log(targetId)
+                if (targetId) {
+                    window.location.href = `./?section=${encodeURIComponent(targetId)}`;
+                }
+            });
+        });
     }
 }
     

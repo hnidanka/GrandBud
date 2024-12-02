@@ -7,19 +7,22 @@ function contact(){
     }
     const modal = document.querySelector('.modal'),
     modalContent = modal.querySelector('.modal-content');
-    
-    emailjs.init("1mXxwMPcfi6IffBb9");
+        
+    emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
         changeTab(modal, modalContent, messages.loading);
-        emailjs.sendForm('service_i2jy12d', 'template_wvdsbu8', this)
-            .then(() => {
-                changeTab(modal, modalContent, messages.success);
+        emailjs.sendForm(serviceId, templateId, this)
+        .then(() => {
+            changeTab(modal, modalContent, messages.success);
+            event.target.reset();
+        }, (error) => {
+            changeTab(modal, modalContent, messages.failure);
+        });
 
-                event.target.reset()
-            }, (error) => {
-                changeTab(modal, modalContent, messages.failure);
-            });
     });
 
 

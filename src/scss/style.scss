@@ -1,12 +1,14 @@
 
 @import 'variables.scss';
 @import 'animations';
+@import 'pricelist';
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: $font-size;
-    /* line-height: 1.6; */
     background-color: $color-primary-second;
     font-family: $font;
     color: $color-primary;
@@ -14,12 +16,10 @@ body, html {
 
 section {
     width: 100%;
-    max-width: 1600px;
     margin: 0 auto;
 }
 .with-padding{
     width: calc(100% - 8rem);
-    max-width: 1400px;
     padding: 0 4rem 0 4rem;
 }
 
@@ -32,49 +32,49 @@ header {
     background-color: $color-darkblue-half-opacity;
     backdrop-filter: $blur;
   
+  
     nav {
       padding: 1rem 4rem;
       display: flex;
-      // justify-content: space-between;
+     justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid $color-primary-low-opacity;
-      // width: 100%;
       #menuBar-icon {
         img {
           width: 2rem;
           display: none;
         }
       }
+      .logo-container{
+        width: 30%;
+        text-align: start;
+        img{
+          width: 50%;
+          height: auto;
+        }
+      }
       ul {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+        all: unset;
+        width: 50%;
         align-items: center;
         list-style: none;
-        padding: 0;
-        margin: 0;
-        gap: 3rem;
-        
-        .toolbar{
-          display: flex;
-          gap: 2rem;
+
+         display: flex;
+         justify-content: space-between;
 
           li {
             color: $color-primary;
             font-weight: $primary-weight;
             cursor: pointer;
+            transition: 0.5s;
             &:hover {
               font-weight: $elem-big-weight;
-              // background-color: $color-darkblue-less-opacity;
             }
-            &:active {
-              // background-color: $color-darkblue-less-opacity;
+            &.active {
               font-weight: $elem-big-weight;
-              color: rgb(255, 255, 255);
             }
           
           }
-        }
       }
     }
   }
@@ -85,7 +85,6 @@ header {
 }
 #home {
     max-height: 745px;
-    // color: $color-primary;
     height: 100vh;
     padding-bottom: 1rem;
     .home-banner {
@@ -100,6 +99,7 @@ header {
         img {
           position: absolute;
           width: 100%;
+          height:auto;
           top: -12%;
           filter: $brightness;
         }
@@ -111,9 +111,7 @@ header {
           font-size: calc(3rem - 4px);
           font-weight: $page-title-weight;
           text-transform: uppercase;
-          // background-color: $color-primary-low-opacity;
           backdrop-filter: $blur;
-        //   padding: 0.3rem; 
         }
       }
     }
@@ -133,6 +131,10 @@ header {
           text-transform: uppercase;
           font-size: 2rem;
           font-weight: $primary-weight;
+          opacity: 0;
+          &.in-view{
+            animation: jumpLeft 1.5s ease-out forwards; 
+          }
         }
       }
       .home-action {
@@ -144,6 +146,10 @@ header {
           color: $color-primary-second;
           text-transform: uppercase;
           font-weight: $elem-big-weight;
+          opacity: 0;
+          &.in-view{
+            animation: fade 2s ease-out forwards; 
+          }
         }
       }
     }
@@ -190,6 +196,7 @@ header {
       img {
         position: absolute;
         width: 100%;
+        height: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -205,10 +212,18 @@ header {
     
       .slogan {
         font-size: calc(2rem + 4px);
-        color: $color-primary-half-opacity;
+        color: transparent;
         font-weight: $elem-big-weight;
+        background: linear-gradient(90deg, #565454, #fff, #4f4e4e);  
+        background-size: 400% 400%; 
+        background-clip: text;
+        -webkit-background-clip: text;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
+        opacity: 0;
+        &.in-view{
+          animation: metalEffect 1s ease-out forwards; 
+        }
       }
   
       .about-us-info {
@@ -230,6 +245,12 @@ header {
           font-size: calc(1rem - 2px);
           font-weight: $elem-big-weight;
           padding: 1rem;
+          width: 30%;
+          transition: width 1s ease;
+          &:hover{
+            width: 100%;
+            transition: 1s;
+          }
         }
       }
     }
@@ -292,11 +313,14 @@ header {
           text-align: center;
           font-size: calc(1rem - 2px);
           font-weight: $small-text-weigth;
-  
-          p {
+          transform: translateY(150%);
+          opacity: 0;
+          &.in-view{
+              animation: jumpBottom 1s forwards;
+            }
+            p {
             margin-bottom: 1rem;
           }
-  
           .divider {
             position: absolute;
             bottom: 0;
@@ -307,10 +331,12 @@ header {
         }
   
         li[data-position="middle-bottom"] {
+          opacity:1;
           position: absolute;
           top: 60%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          animation: none;
+          transform: translate(-50%, -50%); 
           border: none;
           .divider {
             display: none;
@@ -342,6 +368,7 @@ header {
         padding: 0;
         margin: 0;
         .service-block{
+            opacity: 0;
             width: 20%;
             box-sizing: border-box;
             height: 40%;
@@ -353,8 +380,16 @@ header {
             grid-template-rows: 30% 70%;
             grid-column: repeat(2,50%);
             gap: 0.5rem;
-            align-items: start;  
-            color: $color-primary-second;          
+            align-items: start;              
+            color: $color-primary-second; 
+            transition: 0.7s;     
+             &:hover{
+              transform: scale(1.05);
+              transition: 0.7s;
+              } 
+              &.in-view{
+                animation: fade 2s ease-in forwards; 
+              }
             .service-name{
                 grid-column: 2/3;
                 grid-row: 1/2;
@@ -391,6 +426,12 @@ header {
         margin-bottom: 1rem;
         font-size: 1rem;
         font-weight: $elem-big-weight;
+        &:hover{
+          transform: scale(1.1);
+          transition: 0.7s;
+          background-color: $color-blue-light;
+          color: $color-primary;
+         } 
       }
     }
 }
@@ -412,7 +453,6 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-  
         .title {
           font-weight: $section-title-weight;
           font-size: calc(2rem - 6px);
@@ -441,6 +481,7 @@ footer {
             p {
               font-weight: $primary-weight;
               font-size: calc(1rem - 4px);
+              color: $color-primary;
             }
           }
         }
@@ -449,32 +490,33 @@ footer {
       .contact-descr {
         height: 65%;
         background-color: #EBF7FF;
-        padding: 0 7%;
-  
+        padding: 0 2rem 0 2rem;
         .contact-step-list {
           width: 40%;
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: center;
-  
           li {
             color: $color-primary-second;
             padding-left: 2rem;
             position: relative;
             line-height: calc(1rem + 4px);
             margin-bottom: 1rem;
-  
+            &:nth-child(odd)::before {
+              border-color: $color-blue-light;
+            }
+            &:nth-child(even)::before {
+              border-color: $color-darkblue;
+            }
             strong {
               color: $color-darkblue;
               font-size: 1rem;
             }
-  
             p {
               margin-top: 0.5rem;
               font-size: calc(1rem - 2px);
             }
-  
             &::before {
               content: '';
               display: block;
@@ -486,14 +528,6 @@ footer {
               left: -32px;
               top: -10px;
             }
-          }
-  
-          li:nth-child(odd)::before {
-            border-color: $color-blue-light;
-          }
-  
-          li:nth-child(even)::before {
-            border-color: $color-darkblue;
           }
         }
       }
@@ -509,22 +543,19 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.5rem;
+        padding: 1rem;
         border-radius: 30px;
         box-shadow: -2px -2px 10px rgba(17, 33, 45, 0.2), 4px 4px 10px rgba(17, 33, 45, 0.25);
-  
         .form-header {
-          height: 15%;
+          height: auto;
           font-weight: 600;
           color: $color-darkblue;
           border-bottom: 1px solid $color-darkblue;
           margin-bottom: 1rem;
-  
-          p {
-            margin: 0;
-          }
+              p{
+                  text-align: center;
+              }
         }
-  
         fieldset {
           width: 100%;
           height: 85%;
@@ -533,7 +564,6 @@ footer {
           justify-content: space-between;
           padding: 0;
           border: none;
-  
           .client-data {
             display: flex;
             gap: 0.5rem;
@@ -541,7 +571,6 @@ footer {
             flex-wrap: wrap;
             width: 100%;
             height: 30%;
-  
             input {
               width: 40%;
               height: 20%;
@@ -552,24 +581,20 @@ footer {
               padding: 0.5rem;
             }
           }
-  
           textarea {
-            width: 90%;
             height: 50%;
             border: none;
             background: $gradient-border;
             border: 1px solid transparent;
             border-radius: 1rem;
             padding: 0.5rem;
-            overflow: auto;
+            overflow: scroll;
             margin: 0;
-  
             &:focus {
               outline: none;
               border: 2px solid transparent;
             }
           }
-  
           button {
             height: 10%;
             width: 100%;
@@ -592,12 +617,13 @@ footer {
     height: 100%;
    background: $color-primary-low-opacity;
    z-index: 1200;
-
     .modal-content{
     display: flex;
+    width: 40%;
     flex-direction: column;
-    justify-content: start;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     padding: 1rem;
     position: fixed;
     top: 50%;
@@ -613,23 +639,19 @@ footer {
   #works {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     height: 90vh;
     max-height: 630px;
     background-color: $color-primary;
-  
     .works-header {
       padding-top: 1em;
       padding-left: 7%;
       height: 10%;
       font-size: calc(1rem + 6px);
-  
       h2 {
         font-size: calc(2rem - 6px);
         color: $color-darkblue;
       }
     }
-  
     .content {
       height: 80%;
       display: flex;
@@ -638,18 +660,16 @@ footer {
       align-items: center;
       position: relative;
       overflow: hidden;
-  
       .work-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 40%;
+        width: 45%;
         height: 100%;
         position: relative;
         left: 7%;
         z-index: 1;
         gap: 1em;
-  
         .work-slide-descr {
           height: 40%;
           padding: 1em;
@@ -661,27 +681,24 @@ footer {
           background: linear-gradient(to right, $color-darkblue, $color-darkblue-less-opacity);
           backdrop-filter: $blur;
           box-shadow: $shadows-three-layers;
-  
           h2 {
             font-size: calc(1rem + 2px);
             margin: 0 0 0.5rem 0;
           }
-  
           p {
             margin: 0;
           }
         }
       }
-  
       .works-slider {
         position: relative;
-        width: 55%;
+        width: 40%;
         height: 100%;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         gap: 1rem;
-  
+        margin-right: 1rem;
         .works-slider-inner {
           height: 90%;
           position: absolute;
@@ -690,33 +707,29 @@ footer {
           flex-wrap: nowrap;
           overflow: hidden;
         }
-  
         .works-slide {
-          width: 20%;
+          position: relative;
+          width: 50%; 
           padding-right: 2rem;
-  
           img {
             width: 100%;
             height: 100%;
             filter: $brightness;
           }
         }
-  
         .slider-nav {
           position: absolute;
           bottom: 0;
-          width: 60%;
+          width: 100%;
           height: 10%;
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 1em;
-  
           .block {
             height: 0.5em;
             width: 4em;
             background-color: $color-darkblue-half-opacity;
-  
             &:hover {
               transform: scale(1.2);
               transition: 0.6s;
@@ -725,30 +738,24 @@ footer {
             &:active {
               transform: scale(1.2);
               transition: 0.6s;
-              // background-color: $color-darkblue-less-opacity;
             }
           }
-  
           .block.active {
             background-color: $color-darkblue-less-opacity;
           }
         }
       }
-  
       .works-slider-actions {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2em;
-  
         button {
           all: unset;
-  
           img {
             height: 2.5em;
             width: 2.5em;
-  
             &:hover {
               transform: scale(1.2);
               transition: 1s;
@@ -760,13 +767,12 @@ footer {
           }
         }
       }
-  
       .works-slider-counter {
+        color: $color-darkblue;
         font-size: 1.5em;
         font-weight: 200;
       }
     }
   }
-// @import 'pricelist';
 
   @import 'media';

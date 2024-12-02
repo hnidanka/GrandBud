@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cennik</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/scss/pricelist.scss">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    
-    <!-- <link rel="stylesheet" href="/src/scss/media.scss"> -->
-    <script type="module" src="/src/js/main.js"></script>
-    <!-- <script src="app/animations.js"></script> -->
-</head>
-<body>
-    <header>
-        <nav>
-            <div id="menuBar-icon">
-                <img src="favicon/menu.png" alt="menu"/>
-            </div>
-            <ul>
-                <div class="logo-container"><li data-target="home">Logo</li></div>
-                <div class="toolbar">
-                    <li data-target="about-us">O nas</li>
-                <li data-target="services">Usługi</li>
-                <li data-target="pricelist">Cennik</li>
-                <li data-target="works">Pracy</li>
-                <li data-target="contact">Kontakt</li>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cennik</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="src/scss/pricelist.scss">     -->
+        <script type="module" src="src/js/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo-container" data-target="home">
+                    Logo
                 </div>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <div id="pricelistNav-select">
-           
+                <div id="menuBar-icon">
+                    <img src="favicon/menu.png" alt="menu"/>
+                </div>     
+                </div>
+                <ul class="toolbar">
+                    <li data-target="about-us">O nas</li>
+                    <li data-target="services">Usługi</li>
+                    <li data-target="pricelist">Cennik</li>
+                    <li data-target="works">Pracy</li>
+                    <li data-target="contact">Kontakt</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div id="pricelistNav-select"></div>
+            <div id="pricelistNav"></div>
+            <div id="pricelist"></div>
+            <button class="scrollBtn">
+            <svg class="svgIcon" viewBox="0 0 384 512">
+                <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+                ></path>
+            </svg>
+            </button>
         </div>
-        <div id="pricelistNav">
-           
-        </div>
-    
-    <div id="pricelist">
-
-        </div>
-    </div>
-       
-    <footer></footer>
-</body>
+    </body>
 </html>
 
 

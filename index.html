@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <meta name="description" content="FamilyLine - remonty i wykończenia wnętrz, montaż wyposażenia, aranżacje wnętrz, tynkowanie, glazura, montaż drzwi i okien w Szczecinie i okolicach." />
+    <meta name="author" content="FamilyLine">
+    <meta name="google-site-verification" content="Ull8sfKwQgzI6Y7LDVx-mJkvRWjKXcgEkPxCozamP70" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="dc_coverage" content="PL">
+    <meta http-equiv="content-language" content="pl">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="wykończenia wnętrz, remonty, Szczecin, usługi budowlane, montaż wyposażenia">
+    <meta name="robots" content="index, follow">
+    <title>FamilyLine – Remont i wykończenia wnętrz pod klucz w Szczecinie i okolicach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet"> -->
-    <!-- <link rel="stylesheet" href="css/style.css">  -->
-    <!-- <link rel="stylesheet" href="/src/scss/media.scss"> -->
-    <!-- <link rel="stylesheet" href="/src/scss/animations.scss"> -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"> -->
-    <!-- <script type="module" src="app/script.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="module" src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script type="module" src="src/js/main.js" defer></script>
   </head>
 <body>
     <header>
         <nav>
+            <div class="logo-container" data-target="home">
+                <!-- <img src="favicon/logo.png" alt="familyLine logo "> -->
+            </div>
             <div id="menuBar-icon">
                 <img src="favicon/menu.png" alt="menu"/>
+            </div>     
             </div>
-            <ul>
-                <div class="logo-container"><li data-target="home">Logo</li></div>
-                <div class="toolbar">
-                    <li data-target="about-us">O nas</li>
+            <ul class="toolbar">
+                <li data-target="about-us">O nas</li>
                 <li data-target="services">Usługi</li>
                 <li data-target="pricelist">Cennik</li>
                 <li data-target="works">Pracy</li>
                 <li data-target="contact">Kontakt</li>
-                </div>
             </ul>
         </nav>
     </header>
@@ -40,14 +42,17 @@
         <section id="home">
             <div class="home-banner" >
                 <div class="banner-image">
-                    <img src="images/homeImg.jpg" alt="room">
+                    <img src="images/homeImg.webp" alt="home-banner-image"
+                    srcset="images/homeImg370.webp 370w,
+                            images/homeImg1250.webp 1250w"
+                    sizes="(max-width: 600px) 370px,
+                           1250px">
                         <h1 class="title-text">wykończenia Wnętrz</h1>
                 </div>
                 <div class="home-content">
                     <div class="home-descr">
-                        <p>grandbud <br>
-                            Doskonałość<br> 
-                            w każdym detalu
+                        <p>Familyline <br>
+                            Działamy w Szczecinie i okolicach
                         </p>
                     </div>   
                     <div class="home-action">
@@ -61,7 +66,10 @@
         <div class="divider"></div>
         <section id="about-us" class="with-padding">
                 <div class="about-us-image-block">
-                    <img src="images/kachura.jpg" alt="kachura">
+                    <img src="images/kachura.webp" alt="owner-image"
+                    srcset="images/kachura300.webp 300w,
+                    images/kachura1250.webp 1250w"
+                     sizes="(max-width: 600px) 300px,1250px">
                 </div>
                 <div class="about-us-text-block">
                     <p class="slogan">
@@ -84,13 +92,13 @@
                         </div>
                         <div class="rewardItem">
                             <div class="title">
-                                <img src="favicon/award.svg" alt="reward">
+                                <img src="favicon/award.svg" alt="reward-image">
                             </div>
                             <p>Najlepsze meterialy</p>
                         </div>
                         <div class="rewardItem">
                             <div class="title">
-                                100+
+                                1000+
                             </div>
                             <p>zadowolonych klientów</p>
                         </div> 
@@ -100,15 +108,15 @@
                     <h3>W naszej ofercie znajdują się:</h3>
                     <ul class="offer-list">
                         <li>
-                            <p>kompleksowe usługi wykończeniowe mieszkań, domów, hal handlowych oraz hoteli.</p>
+                            <p>Kompleksowe usługi wykończeniowe mieszkań, domów, hal handlowych oraz hoteli.</p>
                             <div class="divider"></div>
                         </li>                      
                         <li data-position="middle-bottom">
-                            <p>Grandbud to nie tylko wykonawstwo, ale również wsparcie w całym procesie budowlanym. Oferujemy dostawę materiałów, pomoc w ich wyborze oraz fachowe konsultacje</p>
+                            <p>Oferujemy dostawę materiałów, pomoc w ich wyborze oraz fachowe konsultacje. FamilyLine to nie tylko wykonawstwo, ale również wsparcie w całym procesie budowlanym. </p>
                             <div class="divider"></div>
                         </li>
                         <li data-position="last-bottom">
-                            <p> umożliwiając również realizację prac z materiałów dostarczonych przez zleceniodawcę</p>
+                            <p> Możliwoś realizacji prac z materiałów dostarczonych przez klientów</p>
                             <div class="divider"></div>
                         </li>
                     </ul>
@@ -117,7 +125,7 @@
         </section>
         <div class="divider"></div>
         <section id="services" class="with-padding">            
-          <h2 class="title"> Usugi</h2>
+          <h2 class="title"> Usługi</h2>
             <ul id="services-list">
                 <li data-target="1" class=" service-block">
                     <h3 class="service-name"> Malowanie </h3>
@@ -177,32 +185,54 @@
                     </div>
                     <div class="works-slider-actions">
                         <button class="prev-action">
-                            <img src="favicon/prev.svg" alt="prev">
+                            <img src="favicon/prev.svg" alt="prev-icon">
                         </button>
                         <div class="works-slider-counter">
                             <p><span class="current">01</span>/<span class="total">02</span></p>
                         </div>
                         <button class="next-action">
-                            <img src="favicon/next.svg" alt="next">
+                            <img src="favicon/next.svg" alt="next-icon">
                         </button>       
                     </div>
                 </div>               
                 <div class="works-slider">
                     <div class="works-slider-inner">
                         <div class="works-slide">
-                            <img src="images/img1.jpg" alt="work1">
+                            <img src="images/our-work1.webp" alt="work1-image"
+                            srcset="images/our-work1300.webp 300w,
+                            images/our-work1.webp 1250w"
+                            sizes="(max-width: 600px) 300px,
+                           1250px">
                         </div>
                         <div class="works-slide">
-                            <img src="images/img2.jpg" alt="work2">
+                            <img src="images/our-work2.webp" alt="work2-image"
+                            srcset="images/our-work2300.webp 300w,
+                            images/our-work2.webp 1250w"
+                            sizes="(max-width: 600px) 300px,
+                           1250px">
                         </div>
                         <div class="works-slide">
-                            <img src="images/img3.jpg" alt="work3">
+                            <img src="images/our-work3.webp" alt="work3-image"
+                            srcset="images/our-work3300.webp 300w,
+                            images/our-work3.webp 1250w"
+                            sizes="(max-width: 600px) 300px,
+                           1250px">
                         </div>
                         <div class="works-slide">
-                            <img src="images/img4.jpg" alt="work4">
+                            <img src="images/our-work4.webp" alt="work4-image"
+                            srcset="images/our-work4300.webp 300w,
+                           
+                            images/our-work4.webp 1250w"
+                            sizes="(max-width: 600px) 300px,
+                            ,1250px">
                         </div>
                         <div class="works-slide">
-                            <img src="images/img5.jpg" alt="work5">
+                            <img src="images/our-work5.webp" alt="work5-image"
+                            srcset="images/our-work5300.webp 300w,
+                           
+                            images/our-work5.webp 1250w"
+                            sizes="(max-width: 600px) 300px,
+                             1250px">
                         </div>
                     </div>
                     <div class="slider-nav">
@@ -224,7 +254,7 @@
             <div class="content">
                 <p>Wypełnij formularz lub zadzwoń:</p> 
                 <div class="phone-block">
-                    <img class="icon" src="favicon/phone.svg" alt="email">
+                    <img class="icon" src="favicon/phone.svg" alt="phone-icon">
                     <p>+48730524951</p>
                 </div>
            </div>
@@ -266,9 +296,7 @@
     </form>
     </section>
     <div class="modal">
-            <div class="modal-content">
-                    <div data-close class="modal__close">&times;</div>
-                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>        
+            <div class="modal-content">     
             </div>
     </div>
    </footer>

@@ -1,33 +1,62 @@
-import { addScrollEventListeners } from "./helper";
-export function navigation (){
-       //menu manipulation
-       const menuButton = document.querySelector('#menuBar-icon');
-       const menu = document.querySelector('nav ul'),
-       toolbar = document.querySelector('.toolbar'),
-       logoContainer = document.querySelector('.logo-container');
-       menuButton.addEventListener('click', (e) => {
-           e.preventDefault();
-           menu.classList.toggle('show');
-           menu.classList.toggle('column');
-           toolbar.classList.toggle('column');
-           logoContainer.classList.toggle('column')
-       });
-   
-       //navigate to pricelist
-       const priceListNavButton = document.querySelector('#services .services-action button');
-       priceListNavButton.addEventListener('click', (e) => {
-           e.preventDefault();
-           window.location.href = 'pricelist.html';
-           console.log('clicke')
-       });
+export function animations(){
 
-       const services = document.querySelectorAll('.service-block');
-       services.forEach(service=>{
-        service.addEventListener('click', (e)=>{
-            e.preventDefault();
-            const targetId = service.getAttribute('data-target'); 
-            console.log(targetId)
-            window.location.href = `pricelist.html?service=${targetId}`;
-        })
-       })
+    const serviceBlocks = document.querySelectorAll('.service-block'),
+    serviceList = document.querySelector('#services-list'),
+    offerBlocks = document.querySelectorAll('.about-us-offer ul li'),
+    sloganBlocks = document.querySelectorAll('.slogan'),
+    aboutUsImageBlock = document.querySelectorAll('.about-us-image-block img'),
+    homeBannerDescr = document.querySelector('.home-content .home-descr p'),
+    homeBannerAction = document.querySelector('.home-content .home-action button');
+
+const isInViewport = (element) => {
+const rect = element.getBoundingClientRect();
+return rect.top >= 0 && rect.bottom <= window.innerHeight;
+};
+const addClassToElem = (elem,className = 'in-view')=>{
+elem.classList.add(className);
+};
+const showInOrder = (item, key) => {
+setTimeout(() => {
+    addClassToElem(item);  
+}, key * 100);
+};
+
+const checkInView = (items) => {
+if (window.innerWidth > 768) {
+    items.forEach((item, key) => {
+        if (isInViewport(item) && !item.classList.contains('in-view')) {
+            showInOrder(item, key);
+        }
+    });
+}else{
+    items.forEach((item) => {
+        if (isInViewport(item) && !item.classList.contains('in-view')) {
+            item.classList.add('in-view');
+        }
+    }); 
 }
+
+
+     
+};
+
+const initServiceScrollAnimation = () => {
+window.addEventListener('scroll', ()=>{
+    checkInView(serviceBlocks);
+checkInView(offerBlocks);
+checkInView(sloganBlocks);
+checkInView(aboutUsImageBlock);
+});
+
+};
+addClassToElem(homeBannerDescr);
+setTimeout(()=>{
+
+addClassToElem(homeBannerAction);
+}, 1000)
+initServiceScrollAnimation()
+}
+
+
+
+export default animations;

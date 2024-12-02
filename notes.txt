@@ -1,41 +1,16 @@
-media rozibratys(slider, contact form) + 
-js contact form email inform user beautiful+
-i zrob media na cennik+-
-style cennik+  r
 
-js button zobacz pracy +
-js cards services nav to cennik and animations+
-js add opportunity to calculate price
-js protect form email fom sending span and etc...
-js add animations
-add icons for menu
-
-make all ckicks and etc to work on phone(click...)+
+text for slider cards 
+logo 
+Integrate Google reCAPTCHA (or hCaptcha) 
 
 
 
 
 
-
-na 05.11:
+js add opportunity to calculate 
 select w prricelist css
-moze liepiej knopku wroc a ne header -
-koly maky ekran menu wybrana opcja zamknij menu
-contact form nie podoba
-slider dla maly ekran
-button zobacz cebbik dla 700px
 
 
-na 06.11:
-loading animation
-scroll to top button
-js protect form email fom sending span and etc...
-add animations
-refactor code
-
-the end:
-clean html css js
-validate css html on w3c
-use webpack
-and babel
-hide everything in .env
+helper.js nie podoba
+navigation.js
+prricelist.js
