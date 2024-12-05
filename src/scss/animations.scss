@@ -1,0 +1,144 @@
+.show{
+    display: block !important;
+    animation-name: fade; 
+    animation-duration: 1.5s;
+}
+
+.hide{
+    display: none;
+    animation-name: fade; 
+    animation-duration: 1.5s;
+}
+
+.focused{
+    filter: brightness(2);
+}
+
+.fade{
+    animation-name: fade; 
+    animation-duration: 1.5s;
+}
+
+.newtons-cradle {
+    --uib-size: 50px;
+    --uib-speed: 1.2s;
+    --uib-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--uib-size);
+    height: var(--uib-size);
+   }
+   
+   .newtons-cradle__dot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    transform-origin: center top;
+   }
+   
+   .newtons-cradle__dot::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 25%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+   }
+   
+   .newtons-cradle__dot:first-child {
+    animation: swing var(--uib-speed) linear infinite;
+   }
+   
+   .newtons-cradle__dot:last-child {
+    animation: swing2 var(--uib-speed) linear infinite;
+   }
+   
+
+
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    padding-top: 1rem;
+ 
+}
+
+@keyframes swing {
+    0% {
+     transform: rotate(0deg);
+     animation-timing-function: ease-out;
+    }
+   
+    25% {
+     transform: rotate(70deg);
+     animation-timing-function: ease-in;
+    }
+   
+    50% {
+     transform: rotate(0deg);
+     animation-timing-function: linear;
+    }
+   }
+   
+   @keyframes swing2 {
+    0% {
+     transform: rotate(0deg);
+     animation-timing-function: linear;
+    }
+   
+    50% {
+     transform: rotate(0deg);
+     animation-timing-function: ease-out;
+    }
+   
+    75% {
+     transform: rotate(-70deg);
+     animation-timing-function: ease-in;
+    }
+   }
+   
+@keyframes fade{
+    from{opacity: 0}
+    to{opacity: 1;}
+}
+
+@keyframes metalEffect {
+    from{
+        transform: scale(1.3);
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes jumpBottom {
+    from{
+    opacity: 0;
+    
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes jumpLeft {
+    from{
+    opacity: 0;
+    transform: translateX(-100%);
+    
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+

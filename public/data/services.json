@@ -1,0 +1,55 @@
+
+{
+    "services":[
+        {
+            "name": "Malowanie",
+            "img": "favicon/paint-roll.png",
+            "description": "Profesjonalne usługi malarskie",
+            "id": 1
+        },
+        {
+            "name": "Zabudowy i tynki",
+            "img": "favicon/zabudowy.svg",
+            "description": "Suche tynki, ścianki g-k, zabudowy, montaż ścian działowych, sufitów podwieszanych ",
+            "id": 2
+        },
+        {
+            "name": "Glazura, terakota,gres",
+            "img": "favicon/glazura.png",
+            "description": "Układanie płytek ceramicznych w łazienkach, kuchniach oraz innych pomieszczeniach",
+            "id": 3
+        },
+        {
+            "name": "Drzwi i okna",
+            "img": "favicon/drzwi-okna.svg",
+            "description": "Montaż i wymiana drzwi oraz okien",
+            "id": 4
+        },
+        {
+            "name": "Podłogi Ściany",
+            "img": "favicon/podloga.svg",
+            "description": "Podłogi, posadzki, wylewki samopoziomujące, wyrównywanie podłóg",
+            "id": 5
+        },
+        {
+            "name": "Hydraulika",
+            "img": "favicon/hydraulika.svg",
+            "description": "Montaż hydrauliki w łazienkach i WC, instalacje wodno-kanalizacyjne, centralnego ogrzewania, kotłowni",
+            "id": 6
+        },
+        {
+            "name": "Elektryka",
+            "img": "favicon/elektryka.svg",
+            "description": "Biały montaż,  instalacja gniazdek, włączników oraz innych punktów elektrycznych",
+            "id": 7
+        },
+        {
+            "name": "Elewacje",
+            "img": "favicon/elewacje.svg",
+            "description": "Wykończenie zewnętrznych ścian budynków",
+            "id": 8
+        }
+
+    ]
+
+}

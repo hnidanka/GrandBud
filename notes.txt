@@ -1,0 +1,16 @@
+
+text for slider cards 
+logo 
+Integrate Google reCAPTCHA (or hCaptcha) 
+
+
+
+
+
+js add opportunity to calculate 
+select w prricelist css
+
+
+helper.js nie podoba
+navigation.js
+prricelist.js
