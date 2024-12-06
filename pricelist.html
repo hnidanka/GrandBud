@@ -7,32 +7,22 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
-        <!-- <link rel="stylesheet" href="src/scss/pricelist.scss">     -->
         <script type="module" src="src/js/main.js"></script>
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="logo-container" data-target="home">
-                    <img src="favicon/logo.png" alt="familyLine logo ">
-                </div>
-                <div id="menuBar-icon">
-                    <img src="favicon/menu.png" alt="menu"/>
-                </div>     
-                </div>
-                <ul class="toolbar">
-                    <li data-target="about-us">O nas</li>
-                    <li data-target="services">Usługi</li>
-                    <li data-target="pricelist">Cennik</li>
-                    <li data-target="works">Pracy</li>
-                    <li data-target="contact">Kontakt</li>
-                </ul>
-            </nav>
-        </header>
         <div class="container">
+            <button class="come-back">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Wróć</span>
+              </button>
             <div id="pricelistNav-select"></div>
             <div id="pricelistNav"></div>
-            <div id="pricelist"></div>
+            <main>
+                <h2>Cennik</h2>
+                <div id="pricelist"></div>
+            </main>
             <button class="scrollBtn">
             <svg class="svgIcon" viewBox="0 0 384 512">
                 <path
@@ -40,8 +30,11 @@
                 ></path>
             </svg>
             </button>
+            
+            
         </div>
     </body>
 </html>
+
 
 

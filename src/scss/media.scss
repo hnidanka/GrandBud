@@ -60,13 +60,18 @@
         padding: 0 2rem 0 2rem;
     }
     
-    header nav{ 
+    header {
+        padding: 1rem 0 1rem 0;
+        nav{ 
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0.5rem 2rem;
         #menuBar-icon img{
         width: 2rem;
         display: block;
             }
         .logo-container img{
-                width: 60px;
+                width: 70px;
             }
          ul {
         display: none;
@@ -74,12 +79,13 @@
         flex-direction: column;
         gap: 1rem;
             li {
-            width: 100%;
+            // width: 100%;
             padding: 1rem;
             text-align: center;
             }
         }
     }
+}
    
     #home {
         height: auto;
@@ -165,6 +171,7 @@
                     margin-bottom: 1rem;
                     .about-us-action{
                         width: 100%;
+                        background-color: $color-primary;
                     }
                 }
                 .about-us-rewards .rewardItem p {
@@ -196,10 +203,10 @@
 
     #works {
         height: auto;
-        min-height: 100vh;
+        max-height: 700px;
     .content{
         flex-wrap: nowrap;
-        height: 80%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between; 
@@ -211,9 +218,15 @@
         flex-direction: row;
         justify-content: space-between;
         width: 80%;
-        height: 40%;
+        height: 200px;
         gap: 1em;
         padding: 0 4rem 0 4rem;
+        .works-header{
+            height: 80px;
+        }
+        .work-slide-descr {
+            height: 200px;
+        }
             .works-slider-actions{
                 display: none; 
             }
@@ -259,6 +272,7 @@ footer #contact{
             align-items: center;
             .contact-step-list{
                 width: 80%;
+                padding-left: 0;
             }
         }
         #contact-form{
@@ -318,10 +332,16 @@ footer #contact{
     #services .services-action button {
         width: 100%;
     }
-}
-
+    footer #contact #contact-form{
+                position: static;
+                width: 80%;
+            }   
+        }
 @media (max-width: 400px) {
     #about-us .about-us-offer h3{
         font-size: calc(1rem + 2px);
     }
 }
+
+
+

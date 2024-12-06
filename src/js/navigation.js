@@ -40,7 +40,7 @@ export function navigation() {
         logo.classList.remove('hide');
     }
     
-    if(window.location.pathname =='/'){ 
+    if(window.location.pathname ==`${import.meta.env.BASE_URL}`){ 
             navigateTo("#services .services-action button");   
     }
     navigateTo('header nav .logo-container img');

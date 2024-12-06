@@ -3,6 +3,7 @@ async function priceList(){
     const scrollBtn = document.querySelector('.scrollBtn');
     scrollBtn.addEventListener('click', (e)=>{
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollBtn.classList.remove('hover');
     })
     async function initPricelistNav() {
         const pricelistNav = document.querySelector('#pricelistNav');
@@ -126,26 +127,26 @@ if (response.ok) {
 }
 
 
-    navigateTo("header nav ul li")
+    navigateTo(".come-back")
     const params = new URLSearchParams(window.location.search);
     const serviceId = params.get('service');
     if (serviceId) {
      scrollToServiceFromUrl(serviceId);
     }
 
-    const menuItems = document.querySelectorAll('nav ul li')
-    if (menuItems.length > 0) {
-        menuItems.forEach(section => {
-            section.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = section.getAttribute('data-target');
-                console.log(targetId)
-                if (targetId) {
-                    window.location.href = `./?section=${encodeURIComponent(targetId)}`;
-                }
-            });
-        });
-    }
+    // const menuItems = document.querySelectorAll('nav ul li')
+    // if (menuItems.length > 0) {
+    //     menuItems.forEach(section => {
+    //         section.addEventListener('click', (e) => {
+    //             e.preventDefault();
+    //             const targetId = section.getAttribute('data-target');
+    //             console.log(targetId)
+    //             if (targetId) {
+    //                 window.location.href = `./?section=${encodeURIComponent(targetId)}`;
+    //             }
+    //         });
+    //     });
+    // }
 }
     
 export default priceList;

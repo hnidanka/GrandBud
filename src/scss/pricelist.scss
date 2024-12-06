@@ -1,138 +1,167 @@
 
 @import 'variables.scss';
-.container{
+
+.container {
     display: flex;
     width: 100%;
     position: relative;
-        #pricelistNav-select{
-            display: none;
-        }
-        #pricelistNav{
-            position: fixed;
-            width: 30%;
-            background-color: $color-darkblue;
-            color: $color-primary;
-            min-height: 100vh; 
-            .categotyList{
-                list-style-type: none;
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-                justify-content: space-between;
-                align-items: start;
-                font-size: calc(1rem - 3px);
-                padding: 1.5rem;
-                height: 100%;
-                min-height: calc(100vh - 3rem);
-                margin-top: 3rem;
-                    .category{
-                        color: white;
-                            &:hover{
-                                font-weight: 600;
-                            } 
-                    }
-            }
-        }
-        #pricelist {
-            position: absolute;
-            top: 3rem;
-            right: 0;
-            width: 70%;
-            background-color: $color-primary;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            table {
-                width:80%;
-                margin: 2rem 1rem;
-                color: #323036;
-                background-color: $color-primary;
-                border-collapse: collapse;
-                border: 1px solid #eee;
-                border-bottom: 2px solid $color-darkblue-lighter;
-                box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
-                            0px 10px 20px rgba(0,0,0,0.05),
-                            0px 20px 20px rgba(0,0,0,0.05),
-                            0px 30px 20px rgba(0,0,0,0.05);
-                margin-bottom: 2rem;
-                    th, td {
-                        border: 1px solid #ddd;
-                        padding: 8px;
-                        text-align: left;
-                    }  
-                    th {
-                        background: $color-darkblue-lighter;
-                        color: #fff;
-                        text-transform: uppercase;
-                        font-weight: $section-subtitle-weight;
-                    } 
-                    tr{
-                        margin: 0.5rem;
-                        font-weight: $primary-weight;
-                        &:hover{
-                            background: #f4f4f4;
-                            color: #020202;
-                        }
-                    }    
-            }
-        }
-        .scrollBtn {
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            z-index: 1000; 
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: rgb(20, 20, 20);
-            border: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            overflow: hidden;
-    
-            .svgIcon {
-                width: 12px;
-                transition: transform 0.3s ease;
-            }
-    
-            .svgIcon path {
-                fill: white;
-            }
-    
-            &:hover {
-                width: 140px;
-                border-radius: 50px;
-                background-color: $color-darkblue-lighter;
-    
-                .svgIcon {
-                    transform: translateY(-200%);
+    background-color: $color-primary;
+    .come-back{
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        z-index: 1100;
+    }
+    #pricelistNav-select{
+                    display: none;
                 }
-            }
-    
-            &::before {
-                position: absolute;
-                transform: translateY(-20px);
-                content: "Idź do góry";
-                color: white;
-                font-size: 0px;
-                transition: all 0.3s ease;
-            }
-    
-            &:hover::before {
-                font-size: 14px;
-                opacity: 1;
-                transform: translateY(0);
-                 transition-duration: 0.3s;
-            }
+    #pricelistNav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30%;
+      background-color: $color-darkblue;
+      color: $color-primary;
+      min-height: 100vh; 
+      z-index: 1000;
+      padding: 1rem;
+      box-sizing: border-box;
+      .categotyList {
+        border-top: 1px solid $color-primary-low-opacity;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: space-between;
+        font-size: calc(1rem - 3px);
+        height: 100%;
+        min-height: calc(100vh - 6rem);
+        padding: 1.5rem;
+        margin-top: 5rem;
+        .category {
+          color: white;
+          &:hover {
+            font-weight: 600;
+          }
         }
-          
-}
-
+      }
+    }
+  
+    main {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 70%;  
+      background-color: $color-primary;
+     left: 30%;
+  
+      h2 {
+        color: #020202;
+      }
+  
+      #pricelist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        background-color: $color-primary;
+  
+        table {
+          width: 80%;
+          margin: 2rem 1rem;
+          color: #323036;
+          background-color: $color-primary;
+          border-collapse: collapse;
+          border: 1px solid #eee;
+          border-bottom: 2px solid $color-darkblue-lighter;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10),
+                      0px 10px 20px rgba(0, 0, 0, 0.05),
+                      0px 20px 20px rgba(0, 0, 0, 0.05),
+                      0px 30px 20px rgba(0, 0, 0, 0.05);
+  
+          th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+          }
+  
+          th {
+            background: $color-darkblue-lighter;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: $section-subtitle-weight;
+          }
+  
+          tr {
+            margin: 0.5rem;
+            font-weight: $primary-weight;
+  
+            &:hover {
+              background: #f4f4f4;
+              color: #020202;
+            }
+          }
+        }
+      }
+    }
+  
+    .scrollBtn {
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px; 
+      z-index: 1000; 
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: rgb(20, 20, 20);
+      border: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;
+  
+      .svgIcon {
+        width: 12px;
+        transition: transform 0.3s ease;
+      }
+  
+      .svgIcon path {
+        fill: white;
+      }
+  
+      &:hover {
+        width: 140px;
+        border-radius: 50px;
+        background-color: $color-darkblue-lighter;
+  
+        .svgIcon {
+          transform: translateY(-200%);
+        }
+      }
+  
+      &::before {
+        position: absolute;
+        transform: translateY(-20px);
+        content: "Idź do góry";
+        color: white;
+        font-size: 0px;
+        transition: all 0.3s ease;
+      }
+  
+      &:hover::before {
+        font-size: 14px;
+        opacity: 1;
+        transform: translateY(0);
+        transition-duration: 0.3s;
+      }
+    }
+  }
+  
+  
 
 .column-category-lp{
     width: 10%;
@@ -163,15 +192,20 @@
 @media (max-width: 960px) {
     .container{
         flex-direction: column;
-        top: 3rem;
-        background-color: $color-primary;
-        padding-top: 2rem;
         align-items: center;
+        .come-back{
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1100;
+        }
         #pricelistNav-select{
-            position: relative;
+            position: absolute;
             display: flex;
             justify-content: center;
             width: 80%;
+            top: 5rem;
+            z-index: 1200;
             select {
                 appearance: none;
                 width: 100%;
@@ -182,44 +216,47 @@
                 box-shadow: 0px 4px 6px $color-darkblue-less-opacity;
                 transition: background-color 0.3s ease, box-shadow 0.3s ease;
                 &:hover {
-                    // background-color:$color-darkblue-less-opacity; 
-                    box-shadow: 0px 6px 10px $color-darkblue; 
+                    box-shadow: 0px 6px 10px $color-darkblue-lighter; 
                 }
             
                 &:focus {
                     outline: none;
-                    border: 2px solid $color-darkblue; /* Highlight border on focus */
+                    border: 1px solid $color-darkblue-lighter; 
                 }
-            
-                /* Optional: Add a caret icon */
-                // &::after {
-                //     content: "▼";
-                //     position: absolute;
-                //     right: 1rem;
-                //     pointer-events: none;
-                // }
             }
             &::after {
-                content: "▼"; /* Add the caret */
+                content: "▼"; 
                 position: absolute;
                 top: 50%;
                 right: 1rem;
                 transform: translateY(-50%);
                 pointer-events: none;
-                color: $color-darkblue; /* Adjust to fit your design */
+                color: $color-darkblue; 
             }
             
         }
         #pricelistNav{    
             display: none;
         }
-        #pricelist{
-            position: static;
-            width: 100%;
-            font-size: 1rem;
-            table{
-                width: 90%;
+        main{
+          width: 100%;
+          left: 0;
+          h2{
+            position: relative;
+            // top: 30%;
+          }
+            #pricelist{
+                position: static;
+                // width: 100%;
+                margin-top: 3rem;
+                font-size: 1rem;
+                table{
+                    width: 90%;
+                }
             }
+        }
+        button.come-back{
+          display: none;
         }
         
     }
@@ -230,3 +267,94 @@
         top: 0rem;
     }
 }
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.come-back {
+    width: 12rem;
+    height: auto;
+    
+   }
+   
+   button.come-back .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: $color-primary;
+    color: $color-darkblue;
+    border-radius: 1.625rem;
+   }
+   
+   button.come-back .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: $color-darkblue;
+   }
+   
+   button.come-back .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.come-back .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid $color-darkblue;
+    border-right: 0.125rem solid $color-darkblue;
+    transform: rotate(45deg);
+   }
+   
+   button.come-back .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: $color-primary;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: $color-darkblue;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: $color-darkblue;
+   }

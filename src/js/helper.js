@@ -69,14 +69,18 @@ export function scrollToServiceFromUrl(param) {
 
 
 export function navigateTo(selector){
+    const basePath = import.meta.env.BASE_URL;
     const navItems = document.querySelectorAll(selector);
+    console.log(navItems)
     navItems.forEach(item=>{
         item.addEventListener('click', (e) => {
             e.preventDefault();
-            if(selector === '#services .services-action button' ){
-                window.location.href = 'pricelist.html';
-            }else{
-                window.location.href = '/';
+            if (selector === '#services .services-action button') {
+                window.location.href = `${basePath}pricelist.html`; 
+                console.log(basePath)
+                console.log('cliecked')
+            } else {
+                window.location.href = `${basePath}`; 
             }
             
         });
